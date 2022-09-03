@@ -1,6 +1,4 @@
 import random
+# Erzeugt Zufallszahl zwischen 1 und 100
+print("Die zufällige Zahl lautet " + str(random.randint(1, 100)))
 
-print("Die zufällige Zahl lautet " + str(random.randint(1, 10)))
-
-ausgabeRandom = "123"
-print("Die zufällig erzeugte Zahl lautet " + ausgabeRandom)
