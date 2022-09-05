@@ -1,0 +1,111 @@
+from tkinter import *
+import random
+
+def check_action(event):
+    # Für Konsole/Kontrolle
+    print("Kontrolle"+str(event))
+    if a*b == event:
+        # #### Wie kriege ich diesen Text in das label "ergebnis_label"????? #######
+        ergebnis_label1 = Label(fenster, text="richtig", bg="lightgreen", fg="black")
+    else:
+        ergebnis_label1 = Label(fenster, text="falsch ", bg="yellow", fg="red")
+    ergebnis_label1.grid(row = 9, column = 8, columnspan = 1, sticky="w")
+
+fenster = Tk()
+fenster.title("Rechenspiel 1x1")
+# Fenstergröße, Hintergrundfarbe
+fenster.geometry('600x300')
+fenster.configure(bg='grey')
+
+# Erzeugt Zufallszahl zwischen 2 und 9
+a = random.randint(2, 4)
+b = random.randint(2, 4)
+
+
+# Definition
+aufgabe_label = Label(fenster, text="Berechne: " + str(a) + " * " + str(b), bg="yellow", fg="red")
+exit_button = Button(fenster, text="Beenden", command=fenster.quit)
+
+# ##### ... #####
+ergebnis_label = Label(fenster, text="Ergebnis")
+
+# command= lambda: say_hi(entry.get())) === Lambda ist Zauberei!
+button4 = Button(fenster, text="4", command= lambda: check_action(4))
+button6 = Button(fenster, text="6", command= lambda: check_action(6))
+button8 = Button(fenster, text="8", command= lambda: check_action(8))
+button9 = Button(fenster, text="9", command= lambda: check_action(9))
+button10 = Button(fenster, text="10", command= lambda: check_action(10))
+button12 = Button(fenster, text="12", command= lambda: check_action(12))
+button14 = Button(fenster, text="14", command= lambda: check_action(14))
+button15 = Button(fenster, text="15", command= lambda: check_action(15))
+
+button16 = Button(fenster, text="16", command= lambda: check_action(16))
+#button18 = Button(fenster, text="18", command=check_action)
+#button20 = Button(fenster, text="20", command=check_action)
+#button21 = Button(fenster, text="21", command=check_action)
+#button24 = Button(fenster, text="24", command=check_action)
+#button25 = Button(fenster, text="25", command=check_action)
+#button27 = Button(fenster, text="27", command=check_action)
+#button28 = Button(fenster, text="28", command=check_action)
+
+#button30 = Button(fenster, text="30", command=check_action)
+#button32 = Button(fenster, text="32", command=check_action)
+#button35 = Button(fenster, text="35", command=check_action)
+#button36 = Button(fenster, text="36", command=check_action)
+#button40 = Button(fenster, text="40", command=check_action)
+#button42 = Button(fenster, text="42", command=check_action)
+#button45 = Button(fenster, text="45", command=check_action)
+#button48 = Button(fenster, text="48", command=check_action)
+
+#button49 = Button(fenster, text="49", command=check_action)
+#button54 = Button(fenster, text="54", command=check_action)
+#button56 = Button(fenster, text="56", command=check_action)
+#button63 = Button(fenster, text="63", command=check_action)
+#button64 = Button(fenster, text="64", command=check_action)
+#button72 = Button(fenster, text="72", command=check_action)
+#button81 = Button(fenster, text="81", command=check_action)
+
+# Positionierung
+aufgabe_label.grid(row = 0, column = 8, columnspan = 1, sticky="w")
+exit_button.grid(row = 1, column = 8, sticky="w")
+ergebnis_label.grid(row = 8, column = 8, columnspan = 1, sticky="w")
+
+
+button4.grid(row = 4, column = 0, sticky="w")
+button6.grid(row = 4, column = 1, sticky="w")
+button8.grid(row = 4, column = 2, sticky="w")
+button9.grid(row = 4, column = 3, sticky="w")
+button10.grid(row = 4, column = 4, sticky="w")
+button12.grid(row = 4, column = 5, sticky="w")
+button14.grid(row = 4, column = 6, sticky="w")
+button15.grid(row = 4, column = 7, sticky="w")
+
+button16.grid(row = 5, column = 0, sticky="w")
+#button18.grid(row = 5, column = 1, sticky="w")
+#button20.grid(row = 5, column = 2, sticky="w")
+#button21.grid(row = 5, column = 3, sticky="w")
+#button24.grid(row = 5, column = 4, sticky="w")
+#button25.grid(row = 5, column = 5, sticky="w")
+#button27.grid(row = 5, column = 6, sticky="w")
+#button28.grid(row = 5, column = 7, sticky="w")
+
+#button30.grid(row = 6, column = 0, sticky="w")
+#button32.grid(row = 6, column = 1, sticky="w")
+#button35.grid(row = 6, column = 2, sticky="w")
+#button36.grid(row = 6, column = 3, sticky="w")
+#button40.grid(row = 6, column = 4, sticky="w")
+#button42.grid(row = 6, column = 5, sticky="w")
+#button45.grid(row = 6, column = 6, sticky="w")
+#button48.grid(row = 6, column = 7, sticky="w")
+
+#button49.grid(row = 7, column = 0, sticky="w")
+#button54.grid(row = 7, column = 1, sticky="w")
+#button56.grid(row = 7, column = 2, sticky="w")
+#button63.grid(row = 7, column = 3, sticky="w")
+#button64.grid(row = 7, column = 4, sticky="w")
+#button72.grid(row = 7, column = 5, sticky="w")
+#button81.grid(row = 7, column = 6, sticky="w")
+
+
+
+mainloop()
