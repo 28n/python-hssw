@@ -1,14 +1,22 @@
 from tkinter import *
 import random
 
+######## Kapiere nicht: In der Funktion kann er a und b verwenden, r und f aber nicht - WARUM????
+
 def check_action(event):
     # Für Konsole/Kontrolle
     print("Kontrolle"+str(event))
     if a*b == event:
         # #### Wie kriege ich diesen Text in das label "ergebnis_label"????? #######
         ergebnis_label1 = Label(fenster, text="richtig", bg="lightgreen", fg="black")
+        r = r + 1
+        # Konsole
+        print("Richtig: " + str(r))
     else:
         ergebnis_label1 = Label(fenster, text="falsch ", bg="yellow", fg="red")
+        f = f + 1
+        # Konsole
+        print("Falsch: " + str(f))
     ergebnis_label1.grid(row = 9, column = 8, columnspan = 1, sticky="w")
 
 fenster = Tk()
@@ -20,7 +28,8 @@ fenster.configure(bg='grey')
 # Erzeugt Zufallszahl zwischen 2 und 9
 a = random.randint(2, 4)
 b = random.randint(2, 4)
-
+r = 0
+f = 0
 
 # Definition
 aufgabe_label = Label(fenster, text="Berechne: " + str(a) + " * " + str(b), bg="yellow", fg="red")
